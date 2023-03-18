@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block titulo %} Lista de libros {% endblock %}
+
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-primary" href="{% url 'crear' %}" role="button">Agregar un nuevo Producto</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Productos</h4>
+       <div class="table-responsive">
+        <table class="table table-secondary">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Descripcion Categoria</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+            </thead>
+            {% for task1 in task %}
+            <div>
+            <tbody>
+                <tr class="">
+                    
+                    <td>{{task1.codigo}}</td>
+                    <td>{{task1.descripcion}}</td>
+                    <td>{{task1.precio}}</td>
+                    <td>{{task1.cantidad}}</td>
+                    <td>{{task1.categoria}}</td>
+                    <td>{{task1.descripcion_categoria}}</td>
+                    <td><a name="" id="" class="btn btn-info" href="{% url 'editar' task1.codigo %}" method="post" role="button">Editar</a>
+                        |
+                    <a name="" id="" class="btn btn-danger" href="{% url 'borrar' task1.codigo  %}" method ="post" role="button">Borrar</a></td>
+                </tr>
+            </tbody>
+            </div>
+            {% endfor %}
+        </table>
+       </div>
+       
+    </div>
+    <div class="card-footer text-muted">
+       
+    </div>
+</div>
+
+
+{% endblock %}

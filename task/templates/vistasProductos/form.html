@@ -1,0 +1,26 @@
+<form enctype="multipart/form-data" action="{% url 'crear_producto' %}" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="" class="form-label">Codigo</label>
+        <input type="text"
+            class="form-control" name="codigo" id="" aria-describedby="helpId" placeholder="Id">
+        <label for="" class="form-label">Descripcion</label>
+        <input type="text"
+          class="form-control" name="descripcion" id="" aria-describedby="helpId" placeholder="Descripcion">
+        <label for="" class="form-label">Precio</label>
+        <input type="text"
+            class="form-control" name="precio" id="" aria-describedby="helpId" placeholder="Precio">        
+        <label for="" class="form-label">Cantidad</label>
+        <input type="text"
+            class="form-control" name="cantidad" id="" aria-describedby="helpId" placeholder="Cantidad">
+        <label for="" class="form-label">Categoria</label>
+        <input type="text"
+            class="form-control" name="categoria" id="" aria-describedby="helpId" placeholder="Categoria">
+        <label for="" class="form-label">Descripcion Categoria</label>    
+        <input type="text"
+            class="form-control" name="descripcion_categoria" id="" aria-describedby="helpId" placeholder="Descripcion Categoria">    
+
+    </div>
+    <button> Guardar</button>
+
+</form>
